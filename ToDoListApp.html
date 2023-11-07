@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body ng-app="myApp" ng-controller="ToDoCtrl">
+
+<h1>To Do App</h1>
+<input type="text" ng-model="ToDoListInput"/>&nbsp;<button ng-click="AddToDoList()">Add</button>
+<ul ng-repeat="todo in ToDoList">
+    <li>{{todo}}&nbsp;&nbsp;<span ng-click="DeleteToDo($index)" style="color:red;font-weight:bold;font-size:20px;">X</span></li>
+</ul>
+
+
+<script src="Script.js"></script>
+
+</body>
+</html>

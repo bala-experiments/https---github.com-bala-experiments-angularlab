@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+<p>Method -1 : Print a string using controller and ng-init directive </p>
+<div ng-app="myApp"  ng-init="firstName='Bala'">
+
+<div ng-controller="myCtrl">
+    {{ firstName + " " + lastName }}
+</div>   
+
+<p>Method -2 : Print a string using controller </p>
+<div ng-controller="myCtrl2">
+    {{ firstname + " " + lastname }}
+</div>
+
+<p>Method-3 Print rootscope variables</p>
+<div>
+    {{ firstName + " " + lastName }}
+</div>
+
+</div>
+
+<script src="Script.js"></script>
+
+</body>
+</html>

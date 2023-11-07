@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <style type="text/css">
+            .fontstyle{
+                font-weight: bold;
+            }
+        </style>
+    </head>
+
+<body>
+<div ng-app="" ng-init="welcomenote='Hello World';person={firstName:'Bala',lastName:'Murugan'};names=['Bala','Murugan','Palanichamy'];nameslist=[
+{name:'Jani',country:'Norway'},
+{name:'Hege',country:'Sweden'},
+{name:'Kai',country:'Denmark'}]">
+
+<p class="fontstyle">Method-1 : Print a string using Expression</p>
+<p>{{ welcomenote }}</p>
+<p class="fontstyle">Method-2 : Print a string using ng-bind directive</p>
+<p ng-bind="welcomenote"></p>
+<p class="fontstyle">Method-3 : Print a string using json object and array object</p>
+<p>Hello {{person.firstName}}&nbsp;{{person.lastName}}&nbsp;{{names[2]}}</p>
+<p class="fontstyle">Method-4 : Print a list using json object ng-Init</p>
+<ul>
+    <li ng-repeat="x in nameslist">
+    {{ x.name + ', ' + x.country }}</li>
+  </ul>
+<br/>
+<p class="fontstyle">Note: Values are initialized using ng-init directive</p>
+</div>
+</body>
+</html>

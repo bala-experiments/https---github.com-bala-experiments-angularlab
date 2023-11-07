@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+<p>Method -1 : Print a string using controller and ng-init directive </p>
+<div ng-app="myApp" ng-controller="myCtrl" ng-init="firstName='Bala'">
+{{ firstName + " " + lastName }}
+
+<p>Method -2 : Print a string using controller </p>
+<div ng-controller="myCtrl2">
+    {{ firstname + " " + lastname }}
+</div>
+
+</div>
+
+<script>
+var app = angular.module("myApp", []);
+app.controller("myCtrl", function($scope) {
+    $scope.firstName = "John";
+    $scope.lastName = "Doe";
+});
+
+app.controller("myCtrl2",function($scope){
+    $scope.firstname = "Bala2";
+    $scope.lastname = "Murugan";
+});
+</script>
+
+</body>
+</html>
